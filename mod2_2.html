@@ -1,0 +1,616 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kalinga Tattooing</title>
+
+    <link href="/css/custom.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/gradient-cards.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Rubik -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet" />
+
+    <!-- Rubik Scribble -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rubik+Scribble&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet" />
+
+    <!-- Rubik Doodle Shadow -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&family=Rubik+Scribble&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet" />
+
+    <!-- Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Doodle+Shadow&family=Rubik+Scribble&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet" />
+</head>
+
+<style>
+    :root {
+        --color1: #00008B;
+        --color2: #FF0000;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        background: linear-gradient(40deg, var(--color1), var(--color2));
+        /* Change this as needed */
+        z-index: 1000;
+        /* Ensure dropdown appears above other content */
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        /* Smooth transition */
+    }
+
+    .dropdown:hover .dropdown-menu {
+        opacity: 1;
+    }
+
+    .dropdown-menu a {
+        color: #ffffff;
+        /* Default text color */
+        transition: color 0.3s ease;
+        /* Smooth transition */
+    }
+
+    .dropdown-menu a:hover {
+        color: black;
+        /* Change text color on hover */
+    }
+
+    .navbar-hidden {
+        transform: translateY(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    .navbar-visible {
+        transform: translateY(0);
+        transition: transform 0.3s ease;
+    }
+
+    .navbar-scrolled {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+</style>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-hidden navbar-scrolled"
+            style="background: linear-gradient(40deg,var(--color1),var(--color2)); position: fixed;">
+            <div class="container">
+                <a class="navbar-brand" href="https://library.livecanvas.com/sections/"> <img
+                        src="/assets/logo.png" width="30" height="30"
+                        class="d-inline-block align-top img-fluid" alt=""> <span editable="inline">[GERPHIS] FCO</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar1"
+                    aria-controls="myNavbar1" aria-expanded="false" aria-label="Toggle navigation"> <span
+                        class="navbar-toggler-icon"></span> </button>
+                <div class="collapse navbar-collapse" id="myNavbar1">
+                    <div lc-helper="shortcode" class="live-shortcode me-auto"> <!--  lc_nav_menu -->
+                        <ul id="menu-menu-1" class="navbar-nav">
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom nav-item nav-item-32739">
+                                <a href="/index.html" class="nav-link ">Home</a>
+                            </li>
+                            <li
+                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home nav-item nav-item-32738">
+                                <a href="/mod1.html" class="nav-link ">Module 1</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="/mod2.html" id="navbarDropdown" role="button"
+                                     aria-expanded="false">
+                                    Module 2
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="/mod2_1.html">Visayas Tattooing</a></li>
+                                    <li><a class="dropdown-item" href="/mod2_2.html">Kalinga Tattooing</a></li>
+                                    <!-- Add more pages as needed -->
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    Module 3
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="/mod3_1.html">Spanish Colonization</a></li>
+                                    <li><a class="dropdown-item" href="/mod3_2.html">Japanese Colonization</a></li>
+                                    <li><a class="dropdown-item" href="/mod3_3.html">American Colonization</a></li>
+                                    <!-- Add more pages as needed -->
+                                </ul>
+                            </li>
+                            <li
+                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home nav-item nav-item-32738">
+                                <a href="/mod4.html" class="nav-link ">Module 4</a>
+                            </li>
+                            <li
+                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home nav-item nav-item-32738">
+                                <a href="/about.html" class="nav-link ">About Us</a>
+                            </li>
+                        </ul> <!-- /lc_nav_menu -->
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Header -->
+
+    <!-- Hero -->
+    <main class="mt-5">
+
+        <div class="container-fluid overflow-hidden p-0">
+            <div class="row g-0">
+                <div class="col-md-6 order-md-2">
+                    <div class="lc-block"><img class="w-100 min-vh-md-100"
+                            src="/assets/whang-od.jpg"
+                            sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="768"
+                            alt="Photo by Toa Heftiba" style="object-fit:cover;object-position:center"></div>
+                </div>
+                <div class="col-md-6 order-md-1 my-auto text-center" style="padding:10vw">
+
+                    <div class="lc-block mb-3">
+                        <div editable="rich">
+                            <h2>Kalinga Tattooing</h2>
+                            <p class="lead"><br>Meet <strong>Apo Whang-od</strong>, the living legend and last mambabatok of the Philippines.
+                                With her steady hands and ancestral wisdom, she brings to life the ancient art of
+                                hand-tapped tattoos, preserving her cultural heritage and inspiring generations with her
+                                craft. <br><br> A beacon of tradition and resilience, her legacy transcends time, leaving an
+                                indelible mark on the hearts of those who encounter her. </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hero -->
+
+        <hr class="my-5" />
+
+        <!-- Section 1 -->
+
+        <div class="container text-center py-lg-6 py-4">
+            <div class="row justify-content-center">
+                <div class="col-xl-7 col-lg-8 col-md-10">
+                    <div class="lc-block mb-4">
+                        <div editable="rich">
+                            <h2 class="rfs-25 fw-bolder">Description</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-9 col-sm-10 col-xl-6">
+                    <div class="lc-block">
+                        <div editable="rich">
+                            <p class="lead">Tattooing in Kalinga is traditionally called <strong>“batek”</strong> or
+                                <strong>“batuk”</strong>. It has an
+                                Austronesian origin from the word <strong>“betik”</strong>.
+                                The term was derived from the sound of the tapping of the stick on the tattoo instrument
+                                to pierce the skin. The word tik means <strong>“to hit slowly”</strong>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 1 -->
+
+        <hr class="my-5" />
+
+        <!-- Section 2 -->
+
+        <div class="container">
+            <div class="row mb-4 align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="lc-block text-center">
+                        <img class="w-100"
+                            src="/assets/kalinga3.png"
+                            srcset="" sizes="" width="" height="" alt="Photo by Jeremy Ricketts" loading="lazy">
+                    </div><!-- /lc-block -->
+                </div><!-- /col -->
+                <div class="col-lg-6 p-lg-6">
+                    <!-- /lc-block -->
+                    <div class="lc-block">
+                        <div class="d-inline-flex">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
+                                    class="text-primary" viewBox="0 0 16 16" lc-helper="svg-icon">
+                                    <path
+                                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z">
+                                    </path>
+                                </svg>
+                            </div>
+
+                            <div class="ms-3 align-self-center" editable="rich">
+                                <p>Tattoo work in Kalinga is done by a tattoo practitioner called “manbatok”.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lc-block">
+                        <div class="d-inline-flex">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
+                                    class="text-primary" viewBox="0 0 16 16" lc-helper="svg-icon">
+                                    <path
+                                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z">
+                                    </path>
+                                </svg>
+                            </div>
+
+                            <div class="ms-3 align-self-center" editable="rich">
+                                <p>There are two kinds of tattoo practitioners: the one who travels to other villages
+                                    and the other who remains in their own village.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lc-block">
+                        <div class="d-inline-flex">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
+                                    class="text-primary" viewBox="0 0 16 16" lc-helper="svg-icon">
+                                    <path
+                                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z">
+                                    </path>
+                                </svg>
+                            </div>
+
+                            <div class="ms-3 align-self-center" editable="rich">
+                                <p>Ink is made from the charcoal powder or soot scraped from underneath a clay pot.
+                                </p>
+                            </div>
+                        </div>
+                    </div><!-- /lc-block -->
+                </div><!-- /col -->
+            </div>
+            <div class="row mb-4 align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0 order-lg-1">
+                    <img class="w-100"
+                            src="/assets/kalinga4.png"
+                            srcset="" sizes="" width="" height="" alt="Photo by Jeremy Ricketts" loading="lazy">
+                </div><!-- /col -->
+                <div class="col-lg-6 p-lg-6">
+                    <!-- /lc-block -->
+                    <div class="lc-block">
+                        <div class="d-inline-flex">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
+                                    class="text-primary" viewBox="0 0 16 16" lc-helper="svg-icon">
+                                    <path
+                                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z">
+                                    </path>
+                                </svg>
+                            </div>
+
+                            <div class="ms-3 align-self-center" editable="rich">
+                                <p>A known alternative tattoo ink is scraped from the bottom of an aluminum pan used for
+                                    daily cooking.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lc-block">
+                        <div class="d-inline-flex">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
+                                    class="text-primary" viewBox="0 0 16 16" lc-helper="svg-icon">
+                                    <path
+                                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z">
+                                    </path>
+                                </svg>
+                            </div>
+
+                            <div class="ms-3 align-self-center" editable="rich">
+                                <p>Sugarcane soot and water are added to the fine charcoal powder and stirred to a
+                                    desired thickness.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lc-block">
+                        <div class="d-inline-flex">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
+                                    class="text-primary" viewBox="0 0 16 16" lc-helper="svg-icon">
+                                    <path
+                                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z">
+                                    </path>
+                                </svg>
+                            </div>
+
+                            <div class="ms-3 align-self-center" editable="rich">
+                                <p>The main tattoo instrument is called the gisi and is hand-tapped using a pat-ik, a
+                                    wooden stick. The gisi is a stick with a lemon thorn that pierces the skin, creating
+                                    the tattoo.
+                                </p>
+                            </div>
+                        </div>
+                    </div><!-- /lc-block -->
+                </div><!-- /col -->
+            </div>
+
+        </div>
+
+        <!-- Section 2 -->
+
+        <hr class="my-5" />
+
+        <!-- Section 3 -->
+
+        <div class="container pt-4 pb-4">
+            <div class="row">
+                <div class="col-md-4 align-self-center">
+                    <div class="lc-block border-bottom">
+                        <div editable="rich">
+
+                            <h1>Design and <br> Symbolism</h1>
+
+
+                        </div>
+                    </div><!-- /lc-block -->
+                </div><!-- /col -->
+                <div class="col-md-4">
+                    <div class="lc-block mb-2">
+                        <img class="img-fluid"
+                            src="/assets/kalinga1.png"
+                            alt="Photo by Cristina Gottardi" loading="lazy">
+                    </div><!-- /lc-block -->
+                    <div class="lc-block">
+                        <div editable="rich">
+                            <p>The different kinds of tattoo designs can be distinguished by grades or <strong> “badges
+                                    of
+                                    honor”</strong>, similar to the badges worn by present-day military soldiers.
+                                &nbsp;</p>
+                        </div>
+                    </div><!-- /lc-block -->
+                </div><!-- /col -->
+                <div class="col-md-4">
+                    <div class="lc-block">
+                        <div editable="rich">
+                            <p> One common design is the <strong> whiing </strong> or chest tattoo.
+                                <strong>Aiyung </strong> tattoo can be found on both cheeks of men but are considered
+                                very rare.
+                            </p>
+                        </div>
+                    </div><!-- /lc-block -->
+                    <div class="lc-block mb-2">
+                        <img class="img-fluid"
+                            src="/assets/kalinga2.png"
+                            alt="Photo by Cristina Gottardi" loading="lazy">
+                    </div><!-- /lc-block -->
+                </div><!-- /col -->
+            </div>
+        </div>
+
+        <!-- Section 3 -->
+
+        <hr class="my-5" />
+
+        <!-- Section 4 -->
+
+        <div class="container py-5 text-center">
+            <div class="row">
+                <div class="col-md-8 offset-md-2 px-4">
+                    <div class="lc-block mb-4">
+                        <div editable="rich">
+                            <h2>IMPORTANCE</h2>
+                        </div>
+                    </div>
+                    <div class="lc-block mb-4">
+                        <div editable="rich">
+                            <p>Tattooing among the Kalinga people is integral to their cultural identity and social
+                                status.
+                                Designs of tattoos carry specific meanings known only to the community members.
+                                Heavily tattooed individuals, such as <strong> pangat </strong> (men) and <strong>
+                                    daughters of kadangyan </strong> (women),
+                                are highly respected in society.
+                                These tattoos also play a crucial role in rites of passage marking transitions in life
+                                stages:
+                                <strong> rites of separation</strong>, <strong> transition</strong>, and <strong>
+                                    incorporation</strong>.
+                                &nbsp;
+                            </p>
+                        </div>
+                    </div>
+                </div><!-- /col -->
+            </div>
+        </div>
+
+        <!-- lazily load the Swiper CSS file -->
+        <link rel="preload" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" as="style"
+            onload="this.onload=null;this.rel='stylesheet'">
+
+        <!-- lazily load the Swiper JS file -->
+        <script defer="defer" src="https://unpkg.com/swiper@8/swiper-bundle.min.js"
+            onload="initializeSwiperRANDOMID();"></script>
+
+        <!-- lc-needs-hard-refresh -->
+
+        <script>
+            function initializeSwiperRANDOMID() {
+                const swiper = new Swiper(".mySwiper-RANDOMID", {
+                    slidesPerView: 1,
+                    grabCursor: true,
+                    spaceBetween: 30,
+
+                    pagination: {
+                        el: ".swiper-pagination",
+                        dynamicBullets: true,
+                    },
+                    breakpoints: {
+                        768: {
+                            slidesPerView: 2,
+                        },
+                        992: {
+                            slidesPerView: 3,
+                        },
+                    },
+                });
+            }
+        </script>
+
+        <style>
+            .mySwiper-RANDOMID .card {
+                max-width: 21rem
+            }
+        </style>
+
+        <div class="container py-6"><!-- Slider main container -->
+            <div class="swiper mySwiper-RANDOMID">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper"><!-- Slides -->
+                    <div class="swiper-slide h-100">
+                        <div class="card shadow mx-auto">
+                            <div class="card-body">
+                                <div class="lc-block">
+                                    <img class="img-fluid"
+                                        src="/assets/kalinga5.png"
+                                        srcset="" sizes="" width="" height="" alt="Photo by Marla Gottschalk"
+                                        loading="lazy">
+                                </div>
+                                <div class="card-body">
+                                    <div class="lc-block mb-3">
+                                        <div editable="rich">
+
+                                            <h2 class="h5">Rites of Separation</h2>
+
+                                            <p>In rites of separation, women receive <strong>Lin-lingao</strong> tattoos
+                                                for protection,
+                                                especially when married or pregnant.
+                                                <br><br><br><br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide h-100">
+                        <div class="card shadow mx-auto">
+                            <div class="card-body">
+                                <div class="lc-block">
+                                    <img class="img-fluid"
+                                        src="/assets/kalinga6.png"
+                                        alt="Photo by Jon Tyson" loading="lazy">
+                                </div>
+                                <div class="card-body">
+                                    <div class="lc-block mb-3">
+                                        <div editable="rich">
+
+                                            <h2 class="h5">Rites of Transition</h2>
+
+                                            <p>Rites of transition include <strong>binulubid</strong> and
+                                                <strong>bikking</strong> tattoos for men,
+                                                symbolizing bravery and adulthood, and <strong>Nirafarafat</strong> and <strong>Inufu-ufug</strong> for
+                                                women, indicating readiness for marriage and motherhood.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide h-100">
+                        <div class="card shadow mx-auto">
+                            <div class="card-body">
+                                <div class="lc-block">
+                                    <img class="img-fluid"
+                                        src="/assets/kalinga7.png"
+                                        sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="1080"
+                                        alt="Photo by Vianney CAHEN" loading="lazy">
+                                </div>
+                                <div class="card-body">
+                                    <div class="lc-block mb-3">
+                                        <div editable="rich">
+
+                                            <h2 class="h5">Rites of Incorporation</h2>
+
+                                            <p>In rites of incorporation, warriors receive badges of honor tattoos,
+                                                while women receive tattoos signifying acceptance into adulthood and
+                                                eligibility for marriage and childbirth.
+                                                <br><br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination position-relative pt-5 bottom-0"></div>
+            </div>
+        </div>
+
+        <!-- Section 4 -->
+
+    </main>
+
+    <!-- Section 2 -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+
+    <script>
+        let lastScroll = 0;
+
+        window.addEventListener("scroll", () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll === 0) {
+                document.querySelector(".navbar").classList.add("navbar-scrolled");
+                document.querySelector(".navbar").classList.remove("navbar-hidden");
+                return;
+            }
+
+            if (currentScroll > lastScroll) {
+                document.querySelector(".navbar").classList.add("navbar-hidden");
+            } else {
+                document.querySelector(".navbar").classList.remove("navbar-hidden");
+            }
+            lastScroll = currentScroll;
+        });
+
+        // Check initial scroll position on page load
+        window.addEventListener("load", () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll === 0) {
+                document.querySelector(".navbar").classList.add("navbar-scrolled");
+                document.querySelector(".navbar").classList.remove("navbar-hidden");
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>

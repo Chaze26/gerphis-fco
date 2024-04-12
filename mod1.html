@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History</title>
+
+    <link href="/css/custom.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- Rubik -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet" />
+
+    <!-- Rubik Scribble -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rubik+Scribble&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet" />
+
+    <!-- Rubik Doodle Shadow -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&family=Rubik+Scribble&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet" />
+
+    <!-- Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Doodle+Shadow&family=Rubik+Scribble&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet" />
+</head>
+
+<style>
+    :root {
+        --color1: #00008B;
+        --color2: #FF0000;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        background: linear-gradient(40deg, var(--color1), var(--color2));
+        /* Change this as needed */
+        z-index: 1000;
+        /* Ensure dropdown appears above other content */
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        /* Smooth transition */
+    }
+
+    .dropdown:hover .dropdown-menu {
+        opacity: 1;
+    }
+
+    .dropdown-menu a {
+        color: #ffffff;
+        /* Default text color */
+        transition: color 0.3s ease;
+        /* Smooth transition */
+    }
+
+    .dropdown-menu a:hover {
+        color: black;
+        /* Change text color on hover */
+    }
+
+    .navbar-hidden {
+        transform: translateY(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    .navbar-visible {
+        transform: translateY(0);
+        transition: transform 0.3s ease;
+    }
+
+    .navbar-scrolled {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+</style>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-hidden navbar-scrolled"
+            style="background: linear-gradient(40deg,var(--color1),var(--color2)); position: fixed;">
+            <div class="container">
+                <a class="navbar-brand" href="https://library.livecanvas.com/sections/"> <img
+                        src="/assets/logo.png" width="30" height="30"
+                        class="d-inline-block align-top img-fluid" alt=""> <span editable="inline">[GERPHIS] FCO</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar1"
+                    aria-controls="myNavbar1" aria-expanded="false" aria-label="Toggle navigation"> <span
+                        class="navbar-toggler-icon"></span> </button>
+                <div class="collapse navbar-collapse" id="myNavbar1">
+                    <div lc-helper="shortcode" class="live-shortcode me-auto"> <!--  lc_nav_menu -->
+                        <ul id="menu-menu-1" class="navbar-nav">
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom nav-item nav-item-32739">
+                                <a href="/index.html" class="nav-link ">Home</a>
+                            </li>
+                            <li
+                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home nav-item nav-item-32738">
+                                <a href="/mod1.html" class="nav-link ">Module 1</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="/mod2.html" id="navbarDropdown" role="button"
+                                     aria-expanded="false">
+                                    Module 2
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="/mod2_1.html">Visayas Tattooing</a></li>
+                                    <li><a class="dropdown-item" href="/mod2_2.html">Kalinga Tattooing</a></li>
+                                    <!-- Add more pages as needed -->
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    Module 3
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="/mod3_1.html">Spanish Colonization</a></li>
+                                    <li><a class="dropdown-item" href="/mod3_2.html">Japanese Colonization</a></li>
+                                    <li><a class="dropdown-item" href="/mod3_3.html">American Colonization</a></li>
+                                    <!-- Add more pages as needed -->
+                                </ul>
+                            </li>
+                            <li
+                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home nav-item nav-item-32738">
+                                <a href="/mod4.html" class="nav-link ">Module 4</a>
+                            </li>
+                            <li
+                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home nav-item nav-item-32738">
+                                <a href="/about.html" class="nav-link ">About Us</a>
+                            </li>
+                        </ul> <!-- /lc_nav_menu -->
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Header -->
+
+    <!-- Hero -->
+    <main class="mt-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-6 col-xl-7 mb-lg-0 py-5 py-md-6">
+                    <div class="lc-block mb-3 mb-md-5 lh-1">
+                        <div editable="rich">
+                            <h1 class="rfs-30 text-primary">What is History?</h1>
+                        </div>
+                    </div><!-- /lc-block -->
+                </div><!-- /col -->
+                <div class="col-12 col-md-6 col-xl-5">
+                    <div class="lc-block px-md-4 px-lg-5 lh-lg">
+                        <div editable="rich">
+                            <p class="rfs-7"> The English word history was derived from the Greek word <i>iotopia</i>,
+                                meaning
+                                learning.
+                            </p>
+                        </div>
+                    </div><!-- /lc-block -->
+                </div><!-- /col -->
+            </div>
+            <div class="row">
+                <div class="col-md-12 g-0">
+                    <div class="lc-block">
+                        <img class="img-fluid w-100" src="/assets/history_hero.png" alt="Photo by Sandro Katalina"
+                            style="object-fit:cover;
+    max-height:35vh">
+                    </div><!-- /lc-block -->
+                </div><!-- /col -->
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-12 d-flex justify-content-center align-items-baseline">
+                    <div class="lc-block py-4 me-3">
+                        <div editable="rich">
+                            <h4 class="fw-bolder">past</h4>
+                        </div>
+                    </div><!-- /lc-block -->
+                    <div class="lc-block py-4">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                            width="2em" height="2em" viewBox="0 0 24 24" lc-helper="svg-icon" fill="currentColor">
+                            <path
+                                d="M23,12L19,16V13H6.83C6.42,14.17 5.31,15 4,15A3,3 0 0,1 1,12A3,3 0 0,1 4,9C5.31,9 6.42,9.83 6.83,11H19V8L23,12Z">
+                            </path>
+                        </svg>
+
+                    </div><!-- /lc-block -->
+                    <div class="lc-block py-4 ms-3">
+                        <div editable="rich">
+                            <h4 class="fw-bolder"> future</h4>
+                        </div>
+                    </div><!-- /lc-block -->
+                </div><!-- /col -->
+            </div>
+        </div>
+
+        <!-- Hero -->
+
+        <!--Main layout-->
+
+        <div class="container">
+            <!--Section: Content-->
+            <section>
+                <div class="row">
+                    <div class="col-md-6 gx-5 mb-4">
+                        <div class="bg-image hover-overlay ripple shadow-2-strong" data-mdb-ripple-color="light">
+                            <img src="/assets/history1.png" class="img-fluid" />
+                            <a href="#!">
+                                <div class="mask" style="background-color: rgba(0,0,0, 0.6)"></div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 gx-5 mb-4">
+                        <h4><strong>History,</strong></h4>
+                        <p class="text-muted">
+                            by its most common definition, is <strong>“the past of mankind”</strong>. However, with this definition, it
+                            would be impossible to reconstruct history. Using purely memories is unreliable and even the
+                            best ones cannot recall their own pasts with full clarity.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <!--Section: Content-->
+
+            <hr class="my-5" />
+            <div style="background-color: #ADD8E6">
+                <div class="container py-5">
+                    <div class="row mb-3">
+                        <div class="col-lg-8 mx-auto text-center">
+                            <div class="lc-block mb-4">
+                                <div editable="rich">
+                                    <p class="badge bg-dark mb-0">Xiao Time Special</p>
+                                    <h1>History is a Science</h1>
+                                </div>
+                            </div><!-- /lc-block -->
+                            <!-- /lc-block -->
+
+
+                            <div class="lc-block">
+                                <div editable="rich">
+
+                                    <p class="lead">Why is the distinction important between treating history as
+                                        humanities
+                                        or making it part of the social sciences? Why does it matter?</p>
+
+                                </div>
+                            </div>
+                            <!-- /lc-block -->
+                        </div><!-- /col -->
+                    </div>
+
+                    <div class="row mb-4 ">
+                        <div class="col-lg-10 mx-auto text-center">
+                            <div class="lc-block position-relative">
+                                <iframe width="60%" height="400"
+                                    src="/assets/Xiao Time Special_ History is a Science.mp4" frameborder="0"
+                                    allowfullscreen></iframe>
+                            </div>
+                        </div><!-- /col -->
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-5" />
+
+            <!--Section: Content-->
+            <section class="text-center">
+                <h4 class="mb-5"><strong>History as...</strong></h4>
+
+                <div class="row">
+                    <div class="col-lg-4 col-md-12 mb-4">
+                        <div class="card">
+                            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                                <img src="/assets/history2.png" class="img-fluid" />
+                                <a href="#!">
+                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                                </a>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">A Study of Past Events</h5>
+                                <p class="card-text">
+                                    History involves the systematic and critical examination of past events, especially
+                                    those affecting nations or institutions.
+                                </p>
+                                <button type="button" class="btn btn-primary" data-toggle="modal"
+                                    data-target="#pastEventsModal">
+                                    Read More
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card">
+                            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                                <img src="/assets/history3.png" class="img-fluid" />
+                                <a href="#!">
+                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                                </a>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">A Record of Past Events</h5>
+                                <p class="card-text">
+                                    History can also refer to a chronological record of significant events, often
+                                    including an explanation of their causes.
+                                </p>
+                                <button type="button" class="btn btn-primary" data-toggle="modal"
+                                    data-target="#recordsModal">
+                                    Read More
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card">
+                            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                                <img src="/assets/history4.png" class="img-fluid" />
+                                <a href="#!">
+                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                                </a>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">A Branch of Knowledge</h5>
+                                <p class="card-text">
+                                    History is considered a branch of knowledge that records and explains past events.
+                                    <br><br>
+                                </p>
+                                <button type="button" class="btn btn-primary" data-toggle="modal"
+                                    data-target="#branchModal">
+                                    Read More
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--Section: Content-->
+
+            <hr class="my-5" />
+    </main>
+    <!--Main layout-->
+
+    <!-- Modals -->
+
+    <div class="modal fade" id="pastEventsModal" tabindex="-1" role="dialog" aria-labelledby="pastEventsModalTitle"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="pastEventsModalTitle">A Study of Past Events</h5>
+                </div>
+                <div class="modal-body">
+                    This field of study focuses on analyzing and interpreting past occurrences to understand their
+                    significance and implications. Historians engage in rigorous research, using various sources
+                    such as
+                    primary documents, archaeological findings, and secondary literature to reconstruct and
+                    interpret
+                    historical events. The study of history encompasses different methodologies, including political
+                    history, social history, cultural history, economic history, and intellectual history, among
+                    others.
+                    Through historical analysis, scholars aim to uncover patterns, causes, and consequences of
+                    events to
+                    gain insights into human behavior and societal development.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="recordsModal" tabindex="-1" role="dialog" aria-labelledby="recordsModalTitle"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="recordsModalTitle">A Record of Past Events</h5>
+                </div>
+                <div class="modal-body">
+                    Historical records can take various forms, such as written accounts, inscriptions, artifacts,
+                    oral
+                    traditions, and visual representations. These records serve as important sources of information
+                    for
+                    reconstructing the past and understanding how societies have evolved over time. Historical
+                    narratives provide context to events, offering interpretations that help make sense of complex
+                    human
+                    experiences. By examining historical records, historians can piece together a comprehensive
+                    timeline
+                    of events and identify key turning points that have shaped the course of history.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="branchModal" tabindex="-1" role="dialog" aria-labelledby="branchModalTitle"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="branchModalTitle">A Branch of Knowledge</h5>
+                </div>
+                <div class="modal-body">
+                    As an academic discipline, history encompasses a wide range of topics and methodologies.
+                    Different
+                    branches of history include political history (focusing on political institutions and events),
+                    social history (examining everyday life, social structures, and cultural practices), economic
+                    history (studying economic systems and activities), cultural history (exploring beliefs, values,
+                    and
+                    artistic expressions), and intellectual history (analyzing ideas and philosophies). Historians
+                    employ diverse approaches, from narrative storytelling to quantitative analysis, to uncover
+                    historical truths and present nuanced interpretations of the past. Through historical inquiry,
+                    scholars aim to contribute to our understanding of human societies and inform contemporary
+                    debates
+                    and decisions.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <script>
+        let lastScroll = 0;
+
+        window.addEventListener("scroll", () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll === 0) {
+                document.querySelector(".navbar").classList.add("navbar-scrolled");
+                document.querySelector(".navbar").classList.remove("navbar-hidden");
+                return;
+            }
+
+            if (currentScroll > lastScroll) {
+                document.querySelector(".navbar").classList.add("navbar-hidden");
+            } else {
+                document.querySelector(".navbar").classList.remove("navbar-hidden");
+            }
+            lastScroll = currentScroll;
+        });
+
+        // Check initial scroll position on page load
+        window.addEventListener("load", () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll === 0) {
+                document.querySelector(".navbar").classList.add("navbar-scrolled");
+                document.querySelector(".navbar").classList.remove("navbar-hidden");
+            }
+        });
+    </script>
+
+</body>
+
+</html>

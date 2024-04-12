@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>[GERPHIS] FCO</title>
+
+    <link href="/css/custom.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Rubik -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet" />
+
+    <!-- Rubik Scribble -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rubik+Scribble&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet" />
+
+    <!-- Rubik Doodle Shadow -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&family=Rubik+Scribble&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet" />
+
+    <!-- Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Doodle+Shadow&family=Rubik+Scribble&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet" />
+</head>
+
+<style>
+    :root {
+        --color1: #00008B;
+        --color2: #FF0000;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        background: linear-gradient(40deg, var(--color1), var(--color2));
+        /* Change this as needed */
+        z-index: 1000;
+        /* Ensure dropdown appears above other content */
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        /* Smooth transition */
+    }
+
+    .dropdown:hover .dropdown-menu {
+        opacity: 1;
+    }
+
+    .dropdown-menu a {
+        color: #ffffff;
+        /* Default text color */
+        transition: color 0.3s ease;
+        /* Smooth transition */
+    }
+
+    .dropdown-menu a:hover {
+        color: black;
+        /* Change text color on hover */
+    }
+
+    .navbar-hidden {
+        transform: translateY(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    .navbar-visible {
+        transform: translateY(0);
+        transition: transform 0.3s ease;
+    }
+
+    .navbar-scrolled {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+</style>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-hidden navbar-scrolled"
+            style="background: linear-gradient(40deg,var(--color1),var(--color2))">
+            <div class="container">
+                <a class="navbar-brand" href="https://library.livecanvas.com/sections/"> <img src="/assets/logo.png"
+                        width="30" height="30" class="d-inline-block align-top img-fluid" alt=""> <span
+                        editable="inline">[GERPHIS] FCO</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar1"
+                    aria-controls="myNavbar1" aria-expanded="false" aria-label="Toggle navigation"> <span
+                        class="navbar-toggler-icon"></span> </button>
+                <div class="collapse navbar-collapse" id="myNavbar1">
+                    <div lc-helper="shortcode" class="live-shortcode me-auto"> <!--  lc_nav_menu -->
+                        <ul id="menu-menu-1" class="navbar-nav">
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom nav-item nav-item-32739">
+                                <a href="/index.html" class="nav-link ">Home</a>
+                            </li>
+                            <li
+                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home nav-item nav-item-32738">
+                                <a href="/mod1.html" class="nav-link ">Module 1</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="/mod2.html" id="navbarDropdown" role="button"
+                                    aria-expanded="false">
+                                    Module 2
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="/mod2_1.html">Visayas Tattooing</a></li>
+                                    <li><a class="dropdown-item" href="/mod2_2.html">Kalinga Tattooing</a></li>
+                                    <!-- Add more pages as needed -->
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    Module 3
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="/mod3_1.html">Spanish Colonization</a></li>
+                                    <li><a class="dropdown-item" href="/mod3_2.html">Japanese Colonization</a></li>
+                                    <li><a class="dropdown-item" href="/mod3_3.html">American Colonization</a></li>
+                                    <!-- Add more pages as needed -->
+                                </ul>
+                            </li>
+                            <li
+                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home nav-item nav-item-32738">
+                                <a href="/mod4.html" class="nav-link ">Module 4</a>
+                            </li>
+                            <li
+                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home nav-item nav-item-32738">
+                                <a href="/about.html" class="nav-link ">About Us</a>
+                            </li>
+                        </ul> <!-- /lc_nav_menu -->
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Header -->
+
+    <!-- Hero -->
+    <main class="mt-5">
+        <div class="d-flex min-vh-100" lc-helper="background"
+            style="background:url('assets/hero_image2.jpg')  center / cover no-repeat; background-color:#444; background-blend-mode: overlay;">
+            <div class="align-self-center text-center text-light col-md-8 offset-md-2">
+                <div class="lc-block mb-4">
+                    <div editable="rich">
+                        <h1 class="display-1 fw-bolder">Discover</h1>
+                    </div>
+                </div>
+
+                <div class="lc-block">
+                    <div editable="rich">
+                        <h3>History. Culture. Economy. Politics.</h3>
+
+                        <h4>IN A NEW PERSPECTIVE.
+
+                        </h4>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hero -->
+
+        <div class="container py-4 py-lg-6">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="lc-block px-4">
+                        <!--  If you want to remove px-4 please add overflow-hidden class to the section -->
+                        <div class="position-relative">
+                            <div class="lc-block position-absolute top-0 end-0 w-100 h-100 bg-dark mt-4 me-4">
+                            </div>
+
+                            <img class="position-relative img-fluid"
+                                src="/assets/home1.png"
+                                sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="1080"
+                                alt="Photo by Spacejoy" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 ">
+                    <div class="lc-block mb-4">
+                        <div editable="rich">
+
+                            <h2 class="fw-bold display-5">History.</h2>
+                        </div>
+                    </div>
+                    <div class="lc-block mb-5">
+                        <div editable="rich">
+
+
+                            <p class="lead text-muted">History, the study of past events, serves as a record of human
+                                experience and a testament to the complexities of our collective journey. It's a branch
+                                of knowledge that delves into societies, cultures, and individuals across time, guiding
+                                our future through lessons of the past.</p>
+                        </div>
+                    </div>
+
+                    <div class="lc-block d-sm-flex align-items-center mb-4 overflow-hidden position-relative">
+                        <div class="d-inline-flex">
+                            <div>
+                                <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg" lc-helper="svg-icon" class="text-success">
+                                    <path fill-rule="evenodd"
+                                        d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z">
+                                    </path>
+                                    <path fill-rule="evenodd"
+                                        d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.236.236 0 0 1 .02-.022z">
+                                    </path>
+                                </svg>
+                            </div>
+
+                            <div class="ms-3 align-self-center" editable="rich">
+                                <p>The Study of Past Events</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lc-block d-sm-flex align-items-center mb-4">
+                        <div class="d-inline-flex">
+                            <div>
+                                <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg" lc-helper="svg-icon" class="text-success">
+                                    <path fill-rule="evenodd"
+                                        d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z">
+                                    </path>
+                                    <path fill-rule="evenodd"
+                                        d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.236.236 0 0 1 .02-.022z">
+                                    </path>
+                                </svg>
+                            </div>
+
+                            <div class="ms-3 align-self-center" editable="rich">
+                                <p>A Record of Past Events</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lc-block d-sm-flex align-items-center mb-4">
+                        <div class="d-inline-flex">
+                            <div>
+                                <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg" lc-helper="svg-icon" class="text-success">
+                                    <path fill-rule="evenodd"
+                                        d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z">
+                                    </path>
+                                    <path fill-rule="evenodd"
+                                        d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.236.236 0 0 1 .02-.022z">
+                                    </path>
+                                </svg>
+                            </div>
+
+                            <div class="ms-3 align-self-center" editable="rich">
+                                <p>A Branch of Knowledge</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-5" />
+
+        <style>
+            .about-img-shape {
+                margin: 30px;
+                z-index: 1
+            }
+
+            .about-img-shape::before {
+                position: absolute;
+                left: -31px;
+                top: -30px;
+                width: 80%;
+                height: 90%;
+                z-index: -1;
+                content: '';
+                background-color: var(--bs-dark);
+                transition: .5s;
+
+            }
+
+            .about-img-shape:after {
+                position: absolute;
+                right: -31px;
+                bottom: -30px;
+                width: 80%;
+                height: 90%;
+                z-index: -1;
+                content: '';
+                background-color: var(--bs-dark);
+                transition: .5s;
+            }
+        </style>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="lc-block">
+                        <span editable="inline" class="small mt-4 d-block">CULTURE</span>
+                        <h2 editable="inline" class="display-2 mb-0"><b>Ink and Steel</b></h2>
+                    </div><!-- /lc-block -->
+                </div>
+            </div>
+
+            <div class="container py-5">
+
+                <div class="row m-4">
+                    <div class="col-lg-5 align-self-center">
+                        <div class="lc-block about-img-shape position-relative"> <img class="img-fluid"
+                                src="/assets/home2.png"
+                                alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 offset-lg-1 my-2 align-self-center">
+                        <div class="lc-block">
+                            <div editable="rich">
+                                <h2>Body Piercing<br></h2>
+                                <p>Dive into the world of pre-colonial body piercing, where metal meets flesh in an
+                                    artful union.
+                                    Explore the
+                                    intricate patterns of piercings that adorn bodies like works of living art.</p>
+                            </div>
+                        </div>
+                        <!-- /lc-block -->
+                    </div>
+                </div>
+                <div class="row m-4">
+                    <div class="col-lg-6 offset-lg-1 my-2 align-self-center">
+                        <div class="lc-block">
+                            <div editable="rich">
+                                <h2>Tattooing</h2>
+                                <p>Embark on a journey into the world of ink and creativity, where skin becomes a canvas
+                                    for stories untold and emotions expressed. In the realm of pre-colonial tattooing,
+                                    artists wield
+                                    their needles like brushes, turning visions into vibrant realities etched beneath
+                                    the surface. </p>
+                            </div>
+                        </div>
+                        <!-- /lc-block -->
+                    </div>
+                    <div class="col-lg-5 align-self-center">
+                        <div class="lc-block about-img-shape position-relative"> <img class="img-fluid"
+                                src="/assets/home3.png"
+                                alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div class="container">
+            <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+                <div class="col">
+                    <div class="lc-block card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+                        lc-helper="background"
+                        style="background-image: url('/assets/home4.png'); background-size:cover">
+                        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                            <div class="lc-block pt-5 mt-5 mb-4">
+                                <div editable="rich">
+                                    <h2 class="display-6 lh-1 fw-bold">Spanish Colonization</h2>
+                                </div>
+                            </div>
+                            <ul class="lc-block d-flex list-unstyled mt-auto ms-auto"><a
+                                    class="btn btn-link btn-sm text-white " href="/mod3_1.html" role="button">Read
+                                    more</a></ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="lc-block card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+                        lc-helper="background"
+                        style="background:url(/assets/home6.png)  center / cover no-repeat;">
+                        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                            <div class="lc-block pt-5 mt-5 mb-4">
+                                <div editable="rich">
+                                    <h2 class="display-6 lh-1 fw-bold">Japanese Colonization
+                                    </h2>
+                                </div>
+                            </div>
+                            <ul class="lc-block d-flex list-unstyled mt-auto ms-auto"><a
+                                    class="btn btn-link btn-sm text-white " href="#" role="button">Read more</a></ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="lc-block card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+                        lc-helper="background"
+                        style="background:url(/assets/home5.png)  center / cover no-repeat;">
+                        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                            <div class="lc-block pt-5 mt-5 mb-4">
+                                <div editable="rich">
+                                    <h2 class="display-6 lh-1 fw-bold">American Colonization</h2>
+                                </div>
+                            </div>
+                            <ul class="lc-block d-flex list-unstyled mt-auto ms-auto"><a
+                                    class="btn btn-link btn-sm text-white " href="#" role="button">Read more</a></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <script>
+        let lastScroll = 0;
+
+        window.addEventListener("scroll", () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll === 0) {
+                document.querySelector(".navbar").classList.add("navbar-scrolled");
+                document.querySelector(".navbar").classList.remove("navbar-hidden");
+                return;
+            }
+
+            if (currentScroll > lastScroll) {
+                document.querySelector(".navbar").classList.add("navbar-hidden");
+            } else {
+                document.querySelector(".navbar").classList.remove("navbar-hidden");
+            }
+            lastScroll = currentScroll;
+        });
+
+        // Check initial scroll position on page load
+        window.addEventListener("load", () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll === 0) {
+                document.querySelector(".navbar").classList.add("navbar-scrolled");
+                document.querySelector(".navbar").classList.remove("navbar-hidden");
+            }
+        });
+    </script>
+
+</body>
+
+</html>

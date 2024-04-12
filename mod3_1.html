@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spanish Colonization</title>
+
+    <link href="/css/custom.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/gradient-cards.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Rubik -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet" />
+
+    <!-- Rubik Scribble -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rubik+Scribble&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet" />
+
+    <!-- Rubik Doodle Shadow -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&family=Rubik+Scribble&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet" />
+
+    <!-- Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Doodle+Shadow&family=Rubik+Scribble&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet" />
+</head>
+
+<style>
+    :root {
+        --color1: #00008B;
+        --color2: #FF0000;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        background: linear-gradient(40deg, var(--color1), var(--color2));
+        /* Change this as needed */
+        z-index: 1000;
+        /* Ensure dropdown appears above other content */
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        /* Smooth transition */
+    }
+
+    .dropdown:hover .dropdown-menu {
+        opacity: 1;
+    }
+
+    .dropdown-menu a {
+        color: #ffffff;
+        /* Default text color */
+        transition: color 0.3s ease;
+        /* Smooth transition */
+    }
+
+    .dropdown-menu a:hover {
+        color: black;
+        /* Change text color on hover */
+    }
+
+    .navbar-hidden {
+        transform: translateY(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    .navbar-visible {
+        transform: translateY(0);
+        transition: transform 0.3s ease;
+    }
+
+    .navbar-scrolled {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+</style>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-hidden navbar-scrolled"
+            style="background: linear-gradient(40deg,var(--color1),var(--color2)); position: fixed;">
+            <div class="container">
+                <a class="navbar-brand" href="https://library.livecanvas.com/sections/"> <img src="/assets/logo.png"
+                        width="30" height="30" class="d-inline-block align-top img-fluid" alt=""> <span
+                        editable="inline">[GERPHIS] FCO</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar1"
+                    aria-controls="myNavbar1" aria-expanded="false" aria-label="Toggle navigation"> <span
+                        class="navbar-toggler-icon"></span> </button>
+                <div class="collapse navbar-collapse" id="myNavbar1">
+                    <div lc-helper="shortcode" class="live-shortcode me-auto"> <!--  lc_nav_menu -->
+                        <ul id="menu-menu-1" class="navbar-nav">
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom nav-item nav-item-32739">
+                                <a href="/index.html" class="nav-link ">Home</a>
+                            </li>
+                            <li
+                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home nav-item nav-item-32738">
+                                <a href="/mod1.html" class="nav-link ">Module 1</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="/mod2.html" id="navbarDropdown" role="button"
+                                    aria-expanded="false">
+                                    Module 2
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="/mod2_1.html">Visayas Tattooing</a></li>
+                                    <li><a class="dropdown-item" href="/mod2_2.html">Kalinga Tattooing</a></li>
+                                    <!-- Add more pages as needed -->
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    Module 3
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="/mod3_1.html">Spanish Colonization</a></li>
+                                    <li><a class="dropdown-item" href="/mod3_2.html">Japanese Colonization</a></li>
+                                    <li><a class="dropdown-item" href="/mod3_3.html">American Colonization</a></li>
+                                    <!-- Add more pages as needed -->
+                                </ul>
+                            </li>
+                            <li
+                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home nav-item nav-item-32738">
+                                <a href="/mod4.html" class="nav-link ">Module 4</a>
+                            </li>
+                            <li
+                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home nav-item nav-item-32738">
+                                <a href="/about.html" class="nav-link ">About Us</a>
+                            </li>
+                        </ul> <!-- /lc_nav_menu -->
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Header -->
+
+    <!-- Hero -->
+    <main class="mt-5">
+        <div class="container my-5">
+            <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+                <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+                    <div class="lc-block mb-3">
+                        <div editable="rich">
+                            <h2 class="fw-bold display-4">Filipino livelihood during the Spanish Colonization&nbsp;
+                                <p></p>
+                                <p></p>
+                            </h2>
+                        </div>
+                    </div>
+
+                    <div class="lc-block mb-3">
+                        <div editable="rich">
+                            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+                    <div class="lc-block"><img class="rounded-start w-100" src="/assets/pol_dyn_hero.png"
+                            alt="Photo by Diego PH" width="720"></div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="container-fluid p-0">
+            <div class="row g-0">
+                <div lc-helper="background" class="col-md-6 order-md-2 ps-4 d-flex"
+                    style="background-size: cover; background-position: center; background-image: url('https://images.unsplash.com/photo-1497035111255-8bc8464dc267?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;h=768&amp;fit=crop&amp;ixid=eyJhcHBfaWQiOjM3ODR9');">
+                    <div class="lc-block align-self-center text-light ms-4">
+                        <div editable="rich">
+                            <h2 class="fw-bold display-1">Any&nbsp;<br>Bold&nbsp;<br>Claim.</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 order-md-1" style="padding:5vh 5vw">
+                    <div class="lc-block mb-5">
+                        <div editable="rich">
+
+                            <p><strong>Manila-Acapulco Galleon Trade 1565-1815.&nbsp;</strong></p>
+
+
+                        </div>
+                    </div><!-- /lc-block -->
+                    <div class="lc-block text-secondary pb-4">
+                        <div editable="rich">
+                            <p>The Manila-Acapulco Galleon Trade is a trade route between Manila and Acapulco de
+                                Juarez that operated for 250 years. This was made possible by the usage of 2 vessels
+                                where one was outgoing and the other was incoming. The galleon trade benefited
+                                mostly privileged Spaniards such as the governors, consulado members and insulares.
+                                Chinese immigrants also benefited from the trade, they took advantage of the goods
+                                influx from Asia and sold them to the Spanish colonies in the Americas. Filipino
+                                labor was utilized in constructing galleons, from cutting wood,transporting wood and
+                                even planting the required materials.&nbsp;</p>
+                        </div>
+                    </div>
+                    <div class="lc-block text-secondary">
+                        <div editable="rich">
+                            <p>The galleon required coconuts as its coir (fiber from the outer husk of the coconut)is
+                                used for rigging and caulking the galleon. Abaca were also planted to be used for
+                                rigging materials. Sugar and sago palm fibers were also used to create ropes. As the
+                                demand for manpower for the galleon trade increased, the manpower from the agricultural
+                                sector were diverted to the trade. This decreased the production of food and also hamper
+                                the growth of the agricultural sector of the country. The country benefited from the
+                                trade through the arrival of various goods such as avocado, guava, papaya, pineapple,
+                                horses, and cattle.</p>
+                        </div>
+                    </div><!-- /lc-block -->
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-5" />
+
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-md-4 align-self-center">
+                    <div class="lc-block border-top py-4" style="letter-spacing:10px">
+                        <div editable="rich">
+                            <h2><strong>Establishment of Economic Institutions under Spain</strong></h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="lc-block">
+                        <div editable="rich">
+
+                            <p><strong>Taxation was introduced by the Spanish colonial government. It consisted of
+                                    direct and indirect taxes. Direct taxes such as paying tribute or buwis can be paid
+                                    in cash or as goods such as palay, tobacco, chickens, textiles, wax and any other
+                                    goods produced in the region of the payer.&nbsp;</strong></p>
+
+
+                        </div>
+                    </div>
+                    <div class="lc-block">
+                        <div editable="rich">
+
+                            <p>When the 1570s arrived the tribute was now fixed to 8 reales and then raised to 15 reales
+                                where 1 real is equal to 12.50 centavos. Payment in goods were also set such as gold,
+                                blankets, cotton, rice and bells.The Filipinos were required to pay tribute of 10
+                                reales, diezmos prediales a tithe of 1 real, town community chest of 1 real and
+                                sanctorum tax of 3 reales which totals to 15 reales. Samboangan or donativo de Zamboanga
+                                were also collected which costs 0.50 real or rice this was collected to finance the
+                                battle against the Moro and also to equip vessels that can protect the coastal areas.
+                            </p>
+
+
+                        </div>
+                    </div>
+                    <div class="lc-block">
+                        <div editable="rich">
+
+                            <p>Tax exemptions were granted to the descendants of Filipino chiefly class that helped
+                                in the pacification campaigns by the conquistadores.The bandala was also collected
+                                annually. It is an annual enforced sale or requisitioning of various goods. In 1884
+                                paying tribute was replaced with cedula personal or personal identity paper. This
+                                tax is required to be paid by everyone over the age of eigtheen even foreigners.
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-5" />
+
+
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="lc-block">
+                        <div editable="rich">
+                            <h1>Implementation of the Encomienda System</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="lc-block">
+                        <div editable="rich">
+                            <p>The Encomienda system is where a Spanish individual with utmost respect is given power
+                                and control over a specific area. There are two types of Encomiendas, the Royal or Crown
+                                and the private encomienda. The Royal encomienda is solely for the royal individuals
+                                which includes principal towns and ports. The private encomiendas were for the king’s
+                                proteges or individuals who helped in the conquest and pacification campaigns.
+                            </p>
+                            <p>Encomenderos were authorized to collect the tribute payment yearly in cash. However, some
+                                of the encomendero charge a higher price violating the set limits.The encomendero also
+                                took advantage of the scarcity of goods and commodities. When a certain good was scarce
+                                they would demand for that certain good as payment.This made some of the Filipinos who
+                                are unable to pay escaped to the hills and were branded as tulisanes.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="lc-block text-center">
+                        <img class="img-fluid"
+                            src="https://cdn.livecanvas.com/media/svg/manypixels/looking_for_idea_with_team.svg" alt=""
+                            loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-5" />
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 offset-md-1">
+                    <div class="lc-block">
+                        <img class="img-fluid"
+                            src="https://images.unsplash.com/photo-1481697943534-ea55b5ce970b?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1488&amp;q=80"
+                            alt="Photo by João Silas" loading="lazy">
+                    </div><!-- /lc-block -->
+                </div><!-- /col -->
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-10 offset-md-1 px-4">
+                    <div class="lc-block  mb-4">
+                        <div editable="rich">
+                            <h2>Rise of the Clase Media</h2>
+                            <p>The economic transformation of the Philippines led to the rise of the middle class also
+                                known as clase media. This was due to the increase of native entrepreneurs that caused
+                                an economic boom. Most of these individuals have atleast P50 in land taxes,decorated
+                                personnel, and school masters.</p>
+                        </div>
+                    </div>
+
+                    <!-- /lc-block -->
+                </div><!-- /col -->
+            </div>
+            <div class="row">
+                <div class="col-md-5   offset-md-1">
+                    <div class="lc-block text-secondary">
+                        <div editable="rich">
+                            <p> The indicators of social status in this century pertains to the size, materials used in
+                                construction and the location of the house in main street or calle real. Other symbols
+                                of an individual’s social status is the owning of livestock, sugarmills, imported
+                                furniture and tableware.
+                            </p>
+                        </div>
+                    </div><!-- /lc-block -->
+                </div><!-- /col -->
+                <div class="col-md-5">
+                    <div class="lc-block text-secondary">
+                        <div editable="rich">
+                            <p> This rise of the middle class can be seen in Manila, where Intramuros contained more of
+                                the affluent people and the Spanish individuals. Extramuros is where the
+                                Filipino,Chinese and mestizo communities were located. Binondo, Ermita, San Jose de
+                                Trozo or Quiapo is where the mestizo and Filipino social elites were located. Tondo was
+                                home to the clase pobre or the lower class.
+
+                            </p>
+                        </div>
+                    </div><!-- /lc-block -->
+                </div><!-- /col -->
+            </div>
+        </div>
+
+        <div class="container py-5 text-center">
+            <div class="row">
+                <div class="col-md-8 offset-md-2 px-4">
+                    <div class="lc-block" style="letter-spacing:5px">
+                        <blockquote class="blockquote ">
+                            <p editable="inline" class="mb-0"><b>Teodoro Agoncillo</b></p>
+                        </blockquote>
+                    </div>
+                    <div class="lc-block text-secondary">
+                        <div editable="rich">
+                            <p>History of the Filipino People 8th Edition</p>
+                        </div>
+                    </div><!-- /lc-block -->
+                </div><!-- /col -->
+            </div>
+        </div>
+
+
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+
+    <script>
+        let lastScroll = 0;
+
+        window.addEventListener("scroll", () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll === 0) {
+                document.querySelector(".navbar").classList.add("navbar-scrolled");
+                document.querySelector(".navbar").classList.remove("navbar-hidden");
+                return;
+            }
+
+            if (currentScroll > lastScroll) {
+                document.querySelector(".navbar").classList.add("navbar-hidden");
+            } else {
+                document.querySelector(".navbar").classList.remove("navbar-hidden");
+            }
+            lastScroll = currentScroll;
+        });
+
+        // Check initial scroll position on page load
+        window.addEventListener("load", () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll === 0) {
+                document.querySelector(".navbar").classList.add("navbar-scrolled");
+                document.querySelector(".navbar").classList.remove("navbar-hidden");
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>

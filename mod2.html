@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tattooing and Body Piercing</title>
+
+    <link href="/css/custom.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/gradient-cards.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Rubik -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet" />
+
+    <!-- Rubik Scribble -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rubik+Scribble&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet" />
+
+    <!-- Rubik Doodle Shadow -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&family=Rubik+Scribble&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet" />
+
+    <!-- Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Doodle+Shadow&family=Rubik+Scribble&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet" />
+</head>
+
+<style>
+    :root {
+        --color1: #00008B;
+        --color2: #FF0000;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        background: linear-gradient(40deg, var(--color1), var(--color2));
+        /* Change this as needed */
+        z-index: 1000;
+        /* Ensure dropdown appears above other content */
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        /* Smooth transition */
+    }
+
+    .dropdown:hover .dropdown-menu {
+        opacity: 1;
+    }
+
+    .dropdown-menu a {
+        color: #ffffff;
+        /* Default text color */
+        transition: color 0.3s ease;
+        /* Smooth transition */
+    }
+
+    .dropdown-menu a:hover {
+        color: black;
+        /* Change text color on hover */
+    }
+
+
+    .navbar-hidden {
+        transform: translateY(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    .navbar-visible {
+        transform: translateY(0);
+        transition: transform 0.3s ease;
+    }
+
+    .navbar-scrolled {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+</style>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-hidden navbar-scrolled"
+            style="background: linear-gradient(40deg,var(--color1),var(--color2))">
+            <div class="container">
+                <a class="navbar-brand" href="https://library.livecanvas.com/sections/"> <img
+                        src="/assets/logo.png" width="30" height="30"
+                        class="d-inline-block align-top img-fluid" alt=""> <span editable="inline">[GERPHIS] FCO</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar1"
+                    aria-controls="myNavbar1" aria-expanded="false" aria-label="Toggle navigation"> <span
+                        class="navbar-toggler-icon"></span> </button>
+                <div class="collapse navbar-collapse" id="myNavbar1">
+                    <div lc-helper="shortcode" class="live-shortcode me-auto"> <!--  lc_nav_menu -->
+                        <ul id="menu-menu-1" class="navbar-nav">
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom nav-item nav-item-32739">
+                                <a href="/index.html" class="nav-link ">Home</a>
+                            </li>
+                            <li
+                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home nav-item nav-item-32738">
+                                <a href="/mod1.html" class="nav-link ">Module 1</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="/mod2.html" id="navbarDropdown" role="button"
+                                    aria-expanded="false">
+                                    Module 2
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="/mod2_1.html">Visayas Tattooing</a></li>
+                                    <li><a class="dropdown-item" href="/mod2_2.html">Kalinga Tattooing</a></li>
+                                    <!-- Add more pages as needed -->
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    Module 3
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="/mod3_1.html">Spanish Colonization</a></li>
+                                    <li><a class="dropdown-item" href="/mod3_2.html">Japanese Colonization</a></li>
+                                    <li><a class="dropdown-item" href="/mod3_3.html">American Colonization</a></li>
+                                    <!-- Add more pages as needed -->
+                                </ul>
+                            </li>
+                            <li
+                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home nav-item nav-item-32738">
+                                <a href="/mod4.html" class="nav-link ">Module 4</a>
+                            </li>
+                            <li
+                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home nav-item nav-item-32738">
+                                <a href="/about.html" class="nav-link ">About Us</a>
+                            </li>
+                        </ul> <!-- /lc_nav_menu -->
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Header -->
+
+    <!-- Hero -->
+    <main class="mt-5">
+        <div class="container-fluid pt-5" style="height: 100vh;">
+            <div class="row mb-4 mb-lg-5 justify-content-lg-between">
+                <div class="col-3 col-md-1 col-lg-2 d-none d-md-flex align-items-center">
+                    <div class="lc-block bg-dark ratio ratio-1x1 opacity-25" style=""> </div><!-- /lc-block -->
+                </div><!-- /col -->
+                <div class="col-4 col-md-3 col-lg-2 d-flex flex-column justify-content-between">
+                    <div class="lc-block bg-primary ratio ratio-1x1 opacity-25" style=""> </div><!-- /lc-block -->
+                    <div class="lc-block">
+                        <img class="img-fluid" src="/assets/tattooing.png" alt="Photo by Meriç Dağlı">
+                    </div><!-- /lc-block -->
+                </div><!-- /col -->
+                <div class="col-4 col-md-4 col-lg-3"> <img class="img-fluid" src="/assets/boxer-codex.png"
+                        style="object-fit:cover" alt="Photo by Simone Hutsch"></div><!-- /col -->
+                <div class="col-4 col-md-3 col-lg-2 d-flex flex-column justify-content-between">
+                    <div class="lc-block">
+                        <img class="img-fluid"
+                            src="/assets/tattooing_hero1.png"
+                            alt="Photo by Simone Hutsch">
+                    </div><!-- /lc-block -->
+                    <div class="lc-block bg-primary ratio ratio-1x1 opacity-25" style=""> </div><!-- /lc-block -->
+                </div><!-- /col -->
+                <div class="col-3 col-md-1 col-lg-2 d-none d-md-flex  align-items-center">
+                    <div class="lc-block bg-dark ratio ratio-1x1 opacity-25" style=""> </div><!-- /lc-block -->
+                </div><!-- /col -->
+            </div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="lc-block text-center col-md-8">
+                        <div editable="rich">
+                            <h1 class="rfs-25 fw-bold">Tattooing and Body Piercing</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="lc-block text-center col-xxl-6 col-md-8">
+                        <div editable="rich">
+                            <p class="lead"> Ink and Steel: Exploring Tattooing and Body Piercing in Pre-Colonial
+                                Filipino Culture</p>
+                        </div>
+                    </div><!-- /lc-block -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Hero -->
+
+        <hr class="my-5" />
+
+        <!-- Section 2 -->
+
+        <div class="container-fluid p-0 overflow-hidden">
+            <div class="row flex-lg-row-reverse g-0 align-items-center" id="penis_pins">
+                <div class="col-lg-6">
+                    <div class="lc-block">
+                        <img class="w-100"
+                            src="/assets/penispins.png"
+                            srcset="" sizes="" width="" height="" alt="Photo by Jeremy Ricketts" loading="lazy">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="lc-block p-3">
+                        <div editable="rich">
+                            <h1>Penis Pins</h1>
+                            <p class="lead">A pin called <strong>“tugbuk”</strong> involves inserting pins through the
+                                genitals during
+                                childhood.
+                                The <strong>“tugbuk”</strong> is used to anchor rings or cogwheels called
+                                <strong>“sakra.”</strong>
+                                The purpose was to enhance stimulation during intercourse for their partners.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-0 align-items-center" id="pierced_ears">
+                <div class="col-lg-6">
+                    <div class="lc-block">
+                        <img class="w-100"
+                            src="/assets/piercedears.png"
+                            srcset="" sizes="" width="" height="" alt="Photo by Photographer Frederik Trovatten"
+                            loading="lazy">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="lc-block p-3">
+                        <div editable="rich">
+                            <h1>Pierced Ears</h1>
+                            <p class="lead">Both men and women wear earrings, with men typically having one or two holes
+                                per
+                                lobe, and women having three or four.
+                                The first few piercings are usually done soon after birth, with additional piercings
+                                done
+                                before the second year.
+                                “Kulot” or “Sipsip” - process for healing torn lobes by trimming the ends and suturing
+                                the
+                                edges together to heal. <br><br> Women typically have more ear piercings per earlobe,
+                                allowing for a
+                                variety of ornaments.
+                                Men's earlobes are stretched larger to accommodate large gold rings that can dangle down
+                                to
+                                the shoulder.
+                                Women find it attractive.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Section 2 -->
+
+    <hr class="my-5" />
+
+    <!-- Section 3 -->
+
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-12 py-4">
+                <div class="lc-block mb-3"><span editable="inline" class="text-uppercase text-danger"><b>A display of
+                            valor and culture</b></span>
+                    <h2 editable="inline" class="display-4 mt-2 text-primary" style="letter-spacing: -2px;"><b>Ink for
+                            the Art</b></h2>
+                    <p editable="inline" class="small">Discover the beauty and importance of pre-colonial tattooing,
+                        specifically the Visayas and Kalinga tattooing.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row py-3">
+            <div class="col-md-6 py-4 my-2 rounded shadow">
+                <div class="row ">
+                    <div class="col-sm-5 d-flex align-self-center">
+                        <div class="lc-block">
+                            <img src="/assets/tattooing4.png" alt=""
+                                class="img-fluid">
+                        </div>
+                    </div>
+
+                    <div class="col-sm-7">
+                        <div class="lc-block mt-2 text-primary">
+                            <h4 editable="inline"><strong>Visayas Tattooing</strong></h4>
+                        </div>
+                        <div class="lc-block mt-2">
+                            <div editable="rich">
+                                <p>Visayas tattooing, deeply rooted in the cultural fabric of the Philippine
+                                    archipelago, showcases a unique blend of symbolism, artistry, and tradition. From
+                                    the intricate geometric patterns to the symbolic representations
+                                    of nature and ancestral spirits, each tattoo reflects the rich heritage and identity
+                                    of the Visayan people.</p>
+                            </div>
+                        </div>
+                        <div class="lc-block mt-2 text-end">
+                            <a class="btn btn-link btn-lg" href="/mod2_1.html" role="button">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 py-4 my-2 rounded shadow">
+                <div class="row">
+                    <div class="col-sm-5 d-flex align-self-center">
+                        <div class="lc-block">
+                            <img src="/assets/tattooing3.png"
+                                alt="" class="img-fluid">
+                        </div>
+                    </div>
+
+                    <div class="col-sm-7">
+                        <div class="lc-block mt-2 text-danger">
+                            <h4 editable="inline"><strong>Kalinga Tattooing</strong></h4>
+                        </div>
+                        <div class="lc-block mt-2">
+                            <div editable="rich">
+                                <p> Kalinga tattooing, an ancient art form originating from the Kalinga tribe in the
+                                    Philippines, holds deep cultural significance within its community. Each symbol and
+                                    pattern represents a unique narrative, making Kalinga
+                                    tattooing a revered tradition that continues to thrive amidst modern influences.</p>
+                            </div>
+                        </div>
+                        <div class="lc-block mt-2 text-end"><a class="btn btn-link text-danger btn-lg"
+                                href="/mod2_2.html" role="button">Read More</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 3 -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <script>
+        let lastScroll = 0;
+
+        window.addEventListener("scroll", () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll === 0) {
+                document.querySelector(".navbar").classList.add("navbar-scrolled");
+                document.querySelector(".navbar").classList.remove("navbar-hidden");
+                return;
+            }
+
+            if (currentScroll > lastScroll) {
+                document.querySelector(".navbar").classList.add("navbar-hidden");
+            } else {
+                document.querySelector(".navbar").classList.remove("navbar-hidden");
+            }
+            lastScroll = currentScroll;
+        });
+
+        // Check initial scroll position on page load
+        window.addEventListener("load", () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll === 0) {
+                document.querySelector(".navbar").classList.add("navbar-scrolled");
+                document.querySelector(".navbar").classList.remove("navbar-hidden");
+            }
+        });
+    </script>
+
+</body>
+
+</html>
